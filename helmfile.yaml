@@ -7,3 +7,6 @@ helmfiles:
 - path: helmfiles/jx-observability/helmfile.yaml  
 templates: {}
 renderedvalues: {}
+releases:
+- chart: jxgh/cd-indicators
+  name: cd-indicators
