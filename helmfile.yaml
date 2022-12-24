@@ -4,9 +4,16 @@ helmfiles:
 - path: helmfiles/kuberhealthy/helmfile.yaml
 - path: helmfiles/nginx/helmfile.yaml
 - path: helmfiles/tekton-pipelines/helmfile.yaml
-- path: helmfiles/jx-observability/helmfile.yaml  
-templates: {}
-renderedvalues: {}
+- path: helmfiles/jx-observability/helmfile.yaml
+repositories:
+- name: jxgh
+  url: https://jenkins-x-charts.github.io/repo
 releases:
 - chart: jxgh/cd-indicators
+  version: 0.0.13
   name: cd-indicators
+  namespace: jx
+  values:
+  - versionStream/charts/jxgh/cd-indicators/values.yaml
+templates: {}
+renderedvalues: {}
