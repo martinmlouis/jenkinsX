@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: martinmlouis
+    provider: github
+    repository: pipeline
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: martinmlouis-pipeline
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/martinmlouis/pipeline.git
+  org: martinmlouis
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: pipeline
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/martinmlouis/pipeline
