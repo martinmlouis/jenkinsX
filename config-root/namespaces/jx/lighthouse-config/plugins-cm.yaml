@@ -8,6 +8,10 @@ data:
       require_self_approval: true
     - lgtm_acts_as_approve: true
       repos:
+      - martinmlouis/node
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
       - martinmlouis/pipeline
       require_self_approval: true
     cat: {}
@@ -25,6 +29,11 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      martinmlouis/node:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
       martinmlouis/pipeline:
       - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
         name: cd-indicators
@@ -37,6 +46,20 @@ data:
     plugins:
       martinmlouis/jenkinsx:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      martinmlouis/node:
       - approve
       - assign
       - help
@@ -75,6 +98,9 @@ data:
     triggers:
     - repos:
       - martinmlouis/jenkinsx
+      trusted_org: todo
+    - repos:
+      - martinmlouis/node
       trusted_org: todo
     - repos:
       - martinmlouis/pipeline
