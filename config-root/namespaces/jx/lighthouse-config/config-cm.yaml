@@ -8,6 +8,8 @@ data:
     in_repo_config:
       enabled:
         martinmlouis/jenkinsx: true
+        martinmlouis/node: true
+        martinmlouis/pipeline: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +22,8 @@ data:
         skip-unknown-contexts: false
       merge_method:
         martinmlouis/jenkinsx: merge
+        martinmlouis/node: merge
+        martinmlouis/pipeline: merge
       queries:
       - labels:
         - approved
@@ -31,6 +35,8 @@ data:
         - needs-rebase
         repos:
         - martinmlouis/jenkinsx
+        - martinmlouis/node
+        - martinmlouis/pipeline
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +47,8 @@ data:
         - needs-rebase
         repos:
         - martinmlouis/jenkinsx
+        - martinmlouis/node
+        - martinmlouis/pipeline
       target_url: http://lighthouse-jx.34.86.122.23.nip.io/merge/status
 kind: ConfigMap
 metadata:
