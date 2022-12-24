@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: martinmlouis
+    provider: github
+    repository: activity
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: martinmlouis-activity
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/martinmlouis/activity.git
+  org: martinmlouis
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: activity
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/martinmlouis/activity
