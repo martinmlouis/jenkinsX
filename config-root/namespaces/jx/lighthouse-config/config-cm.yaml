@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - martinmlouis/jenkinsx
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.34.86.122.23.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
