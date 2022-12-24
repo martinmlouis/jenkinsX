@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         martinmlouis/activity: true
+        martinmlouis/jenkinsnew: true
         martinmlouis/jenkinsx: true
         martinmlouis/node: true
         martinmlouis/pipeline: true
@@ -23,6 +24,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         martinmlouis/activity: merge
+        martinmlouis/jenkinsnew: merge
         martinmlouis/jenkinsx: merge
         martinmlouis/node: merge
         martinmlouis/pipeline: merge
@@ -38,6 +40,7 @@ data:
         repos:
         - martinmlouis/jenkinsx
         - martinmlouis/activity
+        - martinmlouis/jenkinsnew
         - martinmlouis/node
         - martinmlouis/pipeline
       - labels:
@@ -51,6 +54,7 @@ data:
         repos:
         - martinmlouis/jenkinsx
         - martinmlouis/activity
+        - martinmlouis/jenkinsnew
         - martinmlouis/node
         - martinmlouis/pipeline
       target_url: http://lighthouse-jx.34.86.122.23.nip.io/merge/status
